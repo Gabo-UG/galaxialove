@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Viernes 13 💛</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="scene" id="scene">
+    <!-- Fondo realista (canvas) -->
+    <canvas id="space" class="spaceCanvas" aria-hidden="true"></canvas>
+
+    <section class="solar" aria-label="Sistema solar">
+      <!-- Sol (clic/tap para “magia” y para iniciar audio en móvil) -->
+      <button id="sunBtn" class="sun" aria-label="Sol"></button>
+
+      <!-- Órbitas + planetas -->
+      <div id="orbits"></div>
+    </section>
+
+    <!-- Corazoncitos -->
+    <div id="hearts" class="hearts" aria-hidden="true"></div>
+  </main>
+
+  <!-- Audio en loop -->
+  <audio id="bgm" loop preload="auto">
+    <source src="audio/viernes13.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Modal -->
+  <div id="backdrop" class="backdrop hidden" role="dialog" aria-modal="true">
+    <div class="modal" role="document">
+      <div class="modalTop">
+        <div id="modalPhoto" class="photo"></div>
+        <div class="modalText">
+          <h2 id="modalTitle"></h2>
+          <p id="modalMsg"></p>
+        </div>
+      </div>
+      <div class="modalActions">
+        <button id="close" class="btn primary">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
